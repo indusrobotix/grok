@@ -1,58 +1,86 @@
+<!-- products.html (Products Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore robotic kits and components from IndusRoboTix.">
     <title>IndusRoboTix - Products</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Loading Animation -->
-    <div id="loader">
-        <div class="gears-container">
-            <div class="gear-rotate"></div>
-            <div class="gear-rotate-left"></div>
-        </div>
+    <div id="loading">
+        <div class="gear"></div>
+        <div class="gear gear2"></div>
+        <div class="gear gear3"></div>
     </div>
 
     <header>
-        <h1>IndusRoboTix</h1>
         <nav>
+            <div class="logo">IndusRoboTix</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Our Custom Robotic Kits</h2>
-            <p>Browse our selection of custom-built kits using local components and acrylic chassis.</p>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="images/product1.jpg" alt="Robotic Kit 1">
-                    <h3>Basic Robot Kit</h3>
-                    <p>Ideal for beginners. Includes motors, sensors, and custom chassis.</p>
-                    <p>Price: PKR 5,000</p>
+        <section class="products">
+            <h1>Our Products</h1>
+            <p>Discover our range of robotic kits and components, all assembled with local Pakistani parts and custom acrylic chassis.</p>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="placeholder-kit1.jpg" alt="Starter Kit">
+                    <h3>Starter Robotic Kit</h3>
+                    <p>Description: Ideal for beginners. Includes basic sensors, motors, and custom chassis.</p>
+                    <p>Price: PKR 4,000</p>
+                    <a href="contact.html" class="cta">Inquire Now</a>
                 </div>
-                <div class="product">
-                    <img src="images/product2.jpg" alt="Robotic Kit 2">
-                    <h3>Advanced Automation Kit</h3>
-                    <p>For custom projects. Features AI integration and durable parts.</p>
-                    <p>Price: PKR 10,000</p>
+                <div class="product-card">
+                    <img src="placeholder-kit2.jpg" alt="Pro Kit">
+                    <h3>Pro Robotic Kit</h3>
+                    <p>Description: Advanced features with AI integration and durable components.</p>
+                    <p>Price: PKR 12,000</p>
+                    <a href="contact.html" class="cta">Inquire Now</a>
                 </div>
-                <!-- Add more products here -->
+                <!-- Add more products as needed -->
             </div>
+        </section>
+
+        <section class="components">
+            <h2>Individual Components</h2>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="placeholder-component1.jpg" alt="Acrylic Chassis">
+                    <h3>Custom Acrylic Chassis</h3>
+                    <p>Price: PKR 1,500</p>
+                </div>
+                <div class="product-card">
+                    <img src="placeholder-component2.jpg" alt="Motors">
+                    <h3>DC Motors</h3>
+                    <p>Price: PKR 500 each</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Product FAQ</h2>
+            <details>
+                <summary>Are components locally sourced?</summary>
+                <p>Yes, we prioritize Pakistani suppliers for quality and support local economy.</p>
+            </details>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 IndusRoboTix. All rights reserved.</p>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
