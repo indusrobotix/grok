@@ -1,49 +1,67 @@
+<!-- contact.html (Contact Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IndusRoboTix - Contact Us</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Contact IndusRoboTix for inquiries and support.">
+    <title>IndusRoboTix - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Loading Animation -->
-    <div id="loader">
-        <div class="gears-container">
-            <div class="gear-rotate"></div>
-            <div class="gear-rotate-left"></div>
-        </div>
+    <div id="loading">
+        <div class="gear"></div>
+        <div class="gear gear2"></div>
+        <div class="gear gear3"></div>
     </div>
 
     <header>
-        <h1>IndusRoboTix</h1>
         <nav>
+            <div class="logo">IndusRoboTix</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Contact Us</h2>
-            <p>Get in touch for custom orders or inquiries. We're based in Pakistan.</p>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <p>Get in touch for custom orders, questions, or consultations.</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit" class="cta">Send Message</button>
             </form>
+            <div class="contact-info">
+                <p>Location: Pakistan</p>
+                <p>Email: info@indusrobotix.com</p>
+                <p>Phone: +92-123-456789</p>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Contact FAQ</h2>
+            <details>
+                <summary>How long for response?</summary>
+                <p>We aim to reply within 24 hours.</p>
+            </details>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 IndusRoboTix. All rights reserved.</p>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
