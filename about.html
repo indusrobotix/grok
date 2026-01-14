@@ -1,43 +1,65 @@
+<!-- about.html (About Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about IndusRoboTix, our story, and mission.">
     <title>IndusRoboTix - About</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Loading Animation -->
-    <div id="loader">
-        <div class="gears-container">
-            <div class="gear-rotate"></div>
-            <div class="gear-rotate-left"></div>
-        </div>
+    <div id="loading">
+        <div class="gear"></div>
+        <div class="gear gear2"></div>
+        <div class="gear gear3"></div>
     </div>
 
     <header>
-        <h1>IndusRoboTix</h1>
         <nav>
+            <div class="logo">IndusRoboTix</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>About Us</h2>
-            <p>IndusRoboTix, owned by Furqan Khatti, started in 2026 and operates in Pakistan. We buy robotic components from the local market and combine them into custom-built kits with our own designed acrylic chassis. Our focus is on affordable, innovative tech solutions for hobbyists and professionals.</p>
+        <section class="about">
+            <h1>About Us</h1>
+            <p>IndusRoboTix was founded in 2026 by Furqan Khatti in Pakistan. We specialize in assembling custom robotic kits using locally sourced components and our unique custom-designed acrylic chassis.</p>
+            <h2>Our Story</h2>
+            <p>Starting from a passion for robotics and STEM education, we aim to make robotics accessible to students, hobbyists, and professionals across Pakistan.</p>
+            <h2>Owner Bio</h2>
+            <p>Furqan Khatti, a robotics enthusiast with years of experience in mechanical design, leads the team.</p>
+            <h2>Mission</h2>
+            <p>To promote robotics learning and innovation using reliable, locally-made products.</p>
+            <h2>Values</h2>
+            <ul>
+                <li>Quality and Reliability</li>
+                <li>Local Sourcing</li>
+                <li>Educational Focus</li>
+                <li>Customer Satisfaction</li>
+            </ul>
+        </section>
+
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"A game-changer for local robotics!" - Local Engineer</p>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 IndusRoboTix. All rights reserved.</p>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
