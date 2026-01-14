@@ -1,0 +1,226 @@
+/* Import fonts for tech/robotic theme */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap');
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #2B2B2B;
+    color: #F6F6F6;
+    line-height: 1.6;
+}
+
+/* Header and Navigation (mechanical feel with shadows) */
+header {
+    background-color: #1A1A1A;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Metallic depth */
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00BFFF;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #F6F6F6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF4500; /* Orange hover for energy */
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: #3A3A3A;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00BFFF;
+}
+
+/* Products grid (robotic layout) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: #4A4A4A;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Subtle hover animation */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Form (Contact page) */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #00BFFF;
+    background-color: #2B2B2B;
+    color: #F6F6F6;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #00BFFF;
+    color: #1A1A1A;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF4500;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1A1A1A;
+    margin-top: 20px;
+}
+
+/* Loading Animation (Gears) */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2B2B2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.gears-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.gear-rotate {
+    width: 100px;
+    height: 100px;
+    top: 25px;
+    left: 25px;
+    background: #E9E581;
+    position: absolute;
+    border-radius: 50px;
+    animation: gear-rotate 1s linear infinite;
+}
+
+.gear-rotate-left {
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    left: 0;
+    background: #E9E581;
+    position: absolute;
+    border-radius: 50px;
+    animation: gear-rotate-left 1s linear infinite;
+}
+
+/* Gear teeth */
+.gear-rotate::before, .gear-rotate-left::before {
+    width: 140px;
+    height: 140px;
+    background: 
+        linear-gradient(0deg, transparent 39%, #E9E581 39%, #E9E581 61%, transparent 61%),
+        linear-gradient(60deg, transparent 42%, #E9E581 42%, #E9E581 58%, transparent 58%),
+        linear-gradient(120deg, transparent 42%, #E9E581 42%, #E9E581 58%, transparent 58%);
+    position: absolute;
+    content: "";
+    top: -20px;
+    left: -20px;
+    border-radius: 70px;
+}
+
+.gear-rotate::after, .gear-rotate-left::after {
+    width: 50px;
+    height: 50px;
+    background: #2B2B2B;
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 25px;
+    border-radius: 25px;
+}
+
+/* Keyframes for rotation */
+@keyframes gear-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-180deg); }
+}
+
+@keyframes gear-rotate-left {
+    0% { transform: rotate(30deg); }
+    100% { transform: rotate(210deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
